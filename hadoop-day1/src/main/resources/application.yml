@@ -1,0 +1,40 @@
+server:
+  port: 8989
+  context-path: /day1
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+
+spring:
+
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  profiles:
+    active: test
+
+  redis:
+    host: 192.168.194.139
+    port: 7000
+    pool:
+      max-active: 8
+      max-wait: 1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+
+
+
+
